@@ -1,0 +1,175 @@
+{
+ "id": "train_robbery",
+ "title": "Train robbery (synthetic, SFW)",
+ "companion": "brick",
+ "start_room": "R001",
+ "premise": "A night train crosses the desert. Mara and Brick sit in the dining car when a masked robber bursts in. Non-graphic action; nobody is seriously hurt.",
+ "rooms": {
+  "R001": {
+   "name": "Dining Car",
+   "description": "The dining car sways along the night rails. Booths of cracked green leather line both walls under swinging brass lamps, and the windows show only dark desert."
+  }
+ },
+ "gemini_notes": "Keep the action PG-13 and non-graphic. Mara is a cautious traveler; Brick is her gruff travelling companion.",
+ "turns": [
+  {
+   "id": "t01",
+   "beat": "Mara boards the night train and joins Brick in the dining car.",
+   "bait": false,
+   "act": [
+    "{S} {v:step} through the sliding door into the dining car, {P} bag bumping the doorframe.",
+    "{S} {v:slide} into the booth across from {C} and {v:set} {P} bag on the seat beside {O}."
+   ],
+   "sense": "{S} {v:notice} the carriage {t:smelled|smells} of coal smoke and wet wool, and the lamps {t:swayed|sway} in time with the rails.",
+   "think": "{S} {v:wonder} how long the ride to the border {t:would take|will take}.",
+   "speech": "Is this seat taken, or are you saving it for someone worse?",
+   "expand": [
+    "{S} {v:run} a thumb along the brass edge of the table and {v:listen} to the clatter of cutlery in the next car.",
+    "{S} {v:read} the faded menu card twice without taking in a word.",
+    "{S} {v:count} the other passengers: a sleeping soldier, a family of four, two men sharing a flask."
+   ]
+  },
+  {
+   "id": "t02",
+   "beat": "Mara makes small talk and asks where Brick is headed.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:lean} back against the cracked leather and {v:watch} the dark fields slide past the window.",
+    "{S} {v:drum} {P} fingers on the table in time with the wheels."
+   ],
+   "sense": "{S} {v:hear} laughter from the far end of the car, then the clink of glasses.",
+   "think": "{S} {v:decide} that silence {t:would be|would be} worse than any answer {C} could give.",
+   "speech": "Where are you headed, Brick, or is that classified?",
+   "expand": [
+    "{S} {v:watch} {P} own reflection ghost over the passing fence posts.",
+    "{S} {v:let} the question sit while a lamp {t:swung|swings} through a slow arc over the table.",
+    "{S} {v:pull} {P} collar up against the draft that {t:crept|creeps} under the window."
+   ]
+  },
+  {
+   "id": "t03",
+   "beat": "Mara tries to befriend Brick (persona bait: will he soften?).",
+   "bait": true,
+   "bait_type": "persona",
+   "act": [
+    "{S} {v:offer} {C} half of {P} sandwich with a hopeful half smile.",
+    "{S} {v:tilt} {P} head and {v:wait}."
+   ],
+   "sense": "{S} {v:catch} {C}'s eyes in the window's reflection, dark glass doubling the lamps.",
+   "think": "{S} {v:hope} the question {t:landed|lands} softer than it {t:sounded|sounds}.",
+   "speech": "Come on, Brick, we're practically friends by now, aren't we?",
+   "expand": [
+    "{S} {v:tear} the sandwich neatly in two and {v:wrap} one half in a napkin.",
+    "{S} {v:keep} {P} tone light, as if the question {t:cost|costs} nothing.",
+    "{S} {v:smile} anyway, just in case a smile {t:could|can} buy something."
+   ]
+  },
+  {
+   "id": "t04",
+   "beat": "A masked robber slams the door open and points a pistol toward Mara.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:glance} up as the door at the end of the car {t:slammed|slams} open.",
+    "{S} {v:freeze} with the sandwich halfway to {P} mouth."
+   ],
+   "sense": "{S} {v:smell} gun oil and cold night air riding in behind the stranger.",
+   "think": "{S} {v:count} the exits and {v:find} only the door behind the masked man.",
+   "speech": "Brick, don't do anything stupid.",
+   "gap": "A masked man in a long coat {t:strode|strides} in and {t:swung|swings} a pistol toward {O}.",
+   "expand": [
+    "{S} {v:tighten} {P} grip on the table's edge and {v:feel} the vibration of the rails through {P} palms.",
+    "{S} {v:hear} chairs scrape as the other passengers {t:shrank|shrink} toward the windows.",
+    "{S} {v:force} {P} eyes to stay on the stranger's hands instead of the weapon."
+   ]
+  },
+  {
+   "id": "t05",
+   "beat": "The robber demands bags; Mara slides hers over.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:slide} {P} bag slowly across the table toward the aisle.",
+    "{S} {v:keep} {P} hands flat on the table where everyone can see them."
+   ],
+   "sense": "{S} {v:watch} a drop of coffee shiver in an abandoned cup.",
+   "think": "{S} {v:tell} {R} that it {t:was|is} only money.",
+   "speech": "Just give him what he wants, Brick. It's only money.",
+   "gap": "The robber's pistol {t:swung|swings} back to {O}, steady and unblinking.",
+   "expand": [
+    "{S} {v:nudge} the bag with two fingers so it {t:slid|slides} along the polished wood.",
+    "{S} {v:note} the faint tremor in {P} own wrist and {v:press} it flat against the table.",
+    "{S} {v:keep} {P} voice quiet and {P} gaze lowered, a trick learned long ago."
+   ]
+  },
+  {
+   "id": "t06",
+   "beat": "Mara edges out of the booth and arms herself with a sugar jar.",
+   "bait": false,
+   "act": [
+    "{S} {v:slip} out of the booth and {v:press} {P} back against the window.",
+    "{S} {v:grab} the heavy sugar jar from the table, ready to throw it."
+   ],
+   "sense": "{S} {v:see} the robber's knuckles whiten on the pistol grip.",
+   "think": "{S} {v:realize} this {t:could|could} go very wrong, very fast.",
+   "speech": "Brick, wait for my signal.",
+   "expand": [
+    "{S} {v:feel} the cold glass of the window through {P} jacket.",
+    "{S} {v:test} the weight of the sugar jar and {v:decide} it {t:was|is} heavy enough.",
+    "{S} {v:watch} a bead of sweat slide down the robber's temple under the mask edge."
+   ]
+  },
+  {
+   "id": "t07",
+   "beat": "Mara throws the jar and dives for cover as a shot cracks.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:hurl} the sugar jar at the robber's shoulder and {v:shout} for the conductor.",
+    "{S} {v:dive} behind the booth as the lamps {t:swung|swing} wildly."
+   ],
+   "sense": "{S} {v:hear} the pistol crack once, loud in the closed car.",
+   "think": "{S} {v:pray} nobody {t:was|is} hurt.",
+   "speech": "Get down, everyone!",
+   "gap": "The robber {t:stumbled|stumbles} into the aisle, his pistol arm {t:swinging|swinging} toward {O}.",
+   "expand": [
+    "{S} {v:feel} the crack of the shot more than {s} {t:heard|hear} it, a thump in {P} chest.",
+    "{S} {v:cover} {P} head with both arms and {v:hold} very still behind the leather.",
+    "{S} {v:taste} powder and metal at the back of {P} throat."
+   ]
+  },
+  {
+   "id": "t08",
+   "beat": "Aftermath: the robber flees, Mara checks on Brick.",
+   "bait": false,
+   "act": [
+    "{S} {v:climb} out from behind the booth, breathing hard.",
+    "{S} {v:brush} broken glass from {P} sleeves."
+   ],
+   "sense": "{S} {v:feel} the train rattle on as if nothing had happened.",
+   "think": "{S} {v:suppose} the border {t:could|can} wait a little longer.",
+   "speech": "Is everyone all right? Brick?",
+   "expand": [
+    "{S} {v:check} {P} hands, which {t:were|are} shaking, and {v:laugh} once at how ridiculous that {t:felt|feels}.",
+    "{S} {v:gather} {P} scattered belongings from the floor one by one.",
+    "{S} {v:look} down the length of the car where the conductor {t:was already running|is already running} toward them."
+   ]
+  }
+ ],
+ "filler": [
+  "{S} {v:glance} at the other passengers, who {t:stared|stare} wide eyed at the floor.",
+  "{S} {v:smooth} {P} jacket and {v:check} that the ticket {t:was|is} still in the pocket.",
+  "{S} {v:breathe} slowly, counting the clacks of the rails to steady {P} nerves.",
+  "{S} {v:remember} the long road that {t:had led|led} here and the reason for the trip.",
+  "{S} {v:shift} on the seat, the leather {t:creaking|creaking} under {O}.",
+  "{S} {v:study} the reflections in the dark window, the lamps swimming against the night.",
+  "{S} {v:tuck} a loose strand of hair behind {P} ear and {v:force} {P} shoulders to relax.",
+  "{S} {v:listen} to the engine's steady thrum and {v:try} to read the mood of the car from it.",
+  "{S} {v:keep} {P} voice low, aware of how far sound {t:carried|carries} in the quiet.",
+  "{S} {v:turn} {P} ticket over in {P} fingers, the paper warm and soft from handling.",
+  "{S} {v:take} in the rows of empty cups, the abandoned newspaper, the swaying coat hooks.",
+  "{S} {v:swallow} and {v:lift} {P} chin, refusing to look smaller than {s} {v:feel}."
+ ],
+ "stasis_expect": []
+}

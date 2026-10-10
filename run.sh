@@ -1,0 +1,3 @@
+#!/bin/zsh
+# Convenience wrapper: run it from a Python environment that has matplotlib installed (pip install matplotlib). Usage: ./run.sh dryrun | ./run.sh run --config configs/x.json ...
+cd "$(dirname "$0")" && exec python3 -m harness "$@"

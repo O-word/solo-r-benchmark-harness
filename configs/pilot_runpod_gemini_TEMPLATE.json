@@ -1,0 +1,117 @@
+{
+  "name": "pilot_runpod_gemini_TEMPLATE",
+  "description": "TEMPLATE: pilot_runpod with the Gemini player bot and Gemini judge switched on, for after a key exists (~/.solo_bench_gemini.env). Fill in the two REPLACE_ME model names (unverified model ids; check the Gemini model list). The run command refuses while any REPLACE_ME remains. 3 perspectives x Roleplay Style Levels 1-3 x 2 scenarios x 6 turns per configuration (BASE and LORA; 216 turns across the two). The model server is EXTERNAL: already running on a rented GPU and reached through a local SSH tunnel at http://127.0.0.1:1238 (open the tunnel yourself first; `./run.sh check --config configs/pilot_runpod.json` reports whether it answers and which model names it serves, without sending any chat request). The harness never starts, stops or signals the remote server and never opens or closes the tunnel. One server serves both names ('base' and 'lora', e.g. vLLM with --enable-lora --lora-modules lora=<adapter>), so no restarts are needed and sessions alternate BASE/LORA cell by cell (order paired_alternating) so time-of-day effects do not favour one side. The app is made to send the exact model_name per configuration (recorded per transcript row; a mismatch aborts the run). Ports 1234/1235 are never touched. throttle rest_ratio 0 (remote GPU, nothing to protect locally). Sampling matches pilot_real's launch arguments (temperature 0.6, top_p 0.95, max_tokens 500) because vLLM has no such server defaults here. If the server rejects the 'seed' field set inject_seed to false. A tunnel/server failure mid-run pauses the run (resumable) and is recorded in sessions.jsonl.",
+  "mode": "external",
+  "seed": 20261010,
+  "electron_bin": "/path/to/your/Electron",
+  "app_snapshot": "app_snapshot",
+  "tense": "past",
+  "perspectives": [
+    "first",
+    "second",
+    "third"
+  ],
+  "levels": [
+    1,
+    2,
+    3
+  ],
+  "scenarios": [
+    "train_robbery",
+    "quiet_conversation"
+  ],
+  "turns": 6,
+  "replicates": 1,
+  "nice": 10,
+  "scribe": {
+    "enabled": true,
+    "every": 3,
+    "wait": true
+  },
+  "incidents": {
+    "streak": 3,
+    "basis": "raw",
+    "replay": true
+  },
+  "labels": {
+    "sample": 50,
+    "seed": 7
+  },
+  "timeouts": {
+    "turn_s": 600
+  },
+  "app_timeout_s": 300,
+  "order": "paired_alternating",
+  "player_bot": {
+    "kind": "gemini",
+    "model": "REPLACE_ME_gemini_model_for_player",
+    "temperature": 0.9
+  },
+  "judge": {
+    "kind": "gemini",
+    "model": "REPLACE_ME_gemini_model_for_judge",
+    "temperature": 0.0,
+    "seed": 1234
+  },
+  "configurations": [
+    {
+      "id": "base",
+      "label": "BASE model served as 'base' by the external vLLM server, app guards ON",
+      "guards": true,
+      "model": "base",
+      "model_name": "base",
+      "force_model": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "max_tokens": 500,
+      "inject_seed": true,
+      "server_defaults": {
+        "note": "vLLM has no launch-argument sampling defaults like mlx_lm.server did, so the harness injects the pilot_real values (temperature 0.6, top_p 0.95, max_tokens 500) into every reply request, identically for both configurations; scribe calls get seed/model only"
+      },
+      "model_files": {
+        "served_name": "base",
+        "adapter_on_remote": null,
+        "note": "remote files are not hashed by the harness; record the remote model/adapter hashes by hand in the run notes"
+      },
+      "server": {
+        "kind": "external",
+        "host": "127.0.0.1",
+        "port": 1238,
+        "health_timeout_s": 30,
+        "health_recheck_s": 30,
+        "request_timeout_s": 5
+      }
+    },
+    {
+      "id": "lora",
+      "label": "LoRA adapter served as 'lora' by the SAME external vLLM server, app guards ON",
+      "guards": true,
+      "model": "lora",
+      "model_name": "lora",
+      "force_model": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "max_tokens": 500,
+      "inject_seed": true,
+      "server_defaults": {
+        "note": "vLLM has no launch-argument sampling defaults like mlx_lm.server did, so the harness injects the pilot_real values (temperature 0.6, top_p 0.95, max_tokens 500) into every reply request, identically for both configurations; scribe calls get seed/model only"
+      },
+      "model_files": {
+        "served_name": "lora",
+        "adapter_on_remote": "served by the remote vLLM as the model name 'lora'",
+        "note": "remote files are not hashed by the harness; record the remote model/adapter hashes by hand in the run notes"
+      },
+      "server": {
+        "kind": "external",
+        "host": "127.0.0.1",
+        "port": 1238,
+        "health_timeout_s": 30,
+        "health_recheck_s": 30,
+        "request_timeout_s": 5
+      }
+    }
+  ],
+  "throttle": {
+    "rest_ratio": 0
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "name": "dryrun_resume",
+  "description": "Small stub-server config used by the dry run to prove pause (max-minutes), hard stop (SIGTERM) and resume, with the same player/judge settings as the real pilot (local scripted player, no judge).",
+  "mode": "stub",
+  "seed": 424242,
+  "electron_bin": "/path/to/your/Electron",
+  "app_snapshot": "app_snapshot",
+  "tense": "past",
+  "perspectives": [
+    "third"
+  ],
+  "levels": [
+    1,
+    2
+  ],
+  "scenarios": [
+    "train_robbery"
+  ],
+  "turns": 3,
+  "replicates": 1,
+  "scribe": {
+    "enabled": true,
+    "every": 3,
+    "wait": true
+  },
+  "player_bot": {
+    "kind": "local_scripted"
+  },
+  "judge": {
+    "kind": "none"
+  },
+  "incidents": {
+    "streak": 3,
+    "basis": "raw",
+    "replay": true
+  },
+  "labels": {
+    "sample": 50,
+    "seed": 7
+  },
+  "timeouts": {
+    "turn_s": 120
+  },
+  "configurations": [
+    {
+      "id": "stub_guards_on",
+      "label": "stub server, guards ON",
+      "guards": true,
+      "model": "default_model",
+      "force_model": true,
+      "temperature": null,
+      "max_tokens": null,
+      "inject_seed": true,
+      "server_defaults": {
+        "temperature": 0.6
+      },
+      "server": {
+        "kind": "stub",
+        "port": 1237,
+        "mode": "mixed",
+        "extra_args": [
+          "--latency-ms",
+          "500"
+        ]
+      },
+      "instance_policy": "fresh_per_session"
+    },
+    {
+      "id": "stub_guards_off",
+      "label": "stub server, guards OFF",
+      "guards": false,
+      "model": "default_model",
+      "force_model": true,
+      "temperature": null,
+      "max_tokens": null,
+      "inject_seed": true,
+      "server_defaults": {
+        "temperature": 0.6
+      },
+      "server": {
+        "kind": "stub",
+        "port": 1237,
+        "mode": "mixed",
+        "extra_args": [
+          "--latency-ms",
+          "500"
+        ]
+      },
+      "instance_policy": "fresh_per_session"
+    }
+  ]
+}

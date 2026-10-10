@@ -1,0 +1,35 @@
+{
+  "name": "dryrun",
+  "description": "End-to-end dry run against the STUB server (port 1237) with the STUB player bot and STUB judge. No model, no Gemini call.",
+  "mode": "stub",
+  "seed": 20261007,
+  "electron_bin": "/path/to/your/Electron",
+  "app_snapshot": "app_snapshot",
+  "tense": "present",
+  "perspectives": ["first", "second", "third"],
+  "levels": [1, 2, 3],
+  "scenarios": ["train_robbery", "quiet_conversation"],
+  "turns": 3,
+  "replicates": 1,
+  "scribe": {"enabled": true, "every": 3, "wait": true},
+  "player_bot": {"kind": "stub"},
+  "judge": {"kind": "stub"},
+  "incidents": {"streak": 3, "basis": "raw", "replay": true},
+  "labels": {"sample": 50, "seed": 7},
+  "timeouts": {"turn_s": 120},
+  "configurations": [
+    {"id": "stub_guards_on", "label": "stub server, app guards ON", "guards": true, "model": "default_model", "force_model": true, "temperature": 0.7, "max_tokens": 600, "inject_seed": true,
+     "server": {"kind": "stub", "port": 1237, "mode": "mixed"}, "instance_policy": "fresh_per_session"},
+    {"id": "stub_guards_off", "label": "stub server, app guards OFF", "guards": false, "model": "default_model", "force_model": true, "temperature": 0.7, "max_tokens": 600, "inject_seed": true,
+     "server": {"kind": "stub", "port": 1237, "mode": "mixed"}, "instance_policy": "fresh_per_session"},
+    {"id": "stub_bad_instance_demo", "label": "stub server that goes bad after 1 reply on its first start (incident detector demo)", "matrix": false, "guards": true, "model": "default_model", "force_model": true, "temperature": 0.7, "max_tokens": 600, "inject_seed": true,
+     "server": {"kind": "stub", "port": 1237, "mode": "clean", "extra_args": ["--bad-marker", "{run_scratch}/bad.marker", "--bad-after", "1"]}, "instance_policy": "fresh_per_session"},
+    {"id": "stub_long_running_demo", "label": "one stub server kept running across sessions (fresh vs long-running side test)", "matrix": false, "guards": true, "model": "default_model", "force_model": true, "temperature": 0.7, "max_tokens": 600, "inject_seed": true,
+     "server": {"kind": "stub", "port": 1237, "mode": "mixed"}, "instance_policy": "long_running"}
+  ],
+  "extra_sessions": [
+    {"configuration": "stub_bad_instance_demo", "perspective": "third", "level": 2, "scenario": "train_robbery", "turns": 6},
+    {"configuration": "stub_long_running_demo", "perspective": "second", "level": 1, "scenario": "room_change", "turns": 3},
+    {"configuration": "stub_long_running_demo", "perspective": "second", "level": 1, "scenario": "clothing_change", "turns": 3}
+  ]
+}

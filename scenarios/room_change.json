@@ -1,0 +1,220 @@
+{
+ "id": "room_change",
+ "title": "Room change (synthetic, SFW)",
+ "companion": "sable",
+ "start_room": "R001",
+ "premise": "Mara and Sable move through their survey ship: bridge, then galley, then cargo hold, checking a faulty sensor. Tests whether the companion keeps track of where the scene is after the app moves the player between rooms.",
+ "gemini_notes": "Calm shipboard errand, no danger. Mara is the captain.",
+ "rooms": {
+  "R001": {
+   "name": "Bridge",
+   "description": "The bridge is a narrow curved room of blue screens and worn command chairs. A single large viewport shows the slow turn of a distant planet."
+  },
+  "R002": {
+   "name": "Galley",
+   "description": "The galley smells of burnt toast and strong tea. Steel counters, a humming cooler, and a table bolted to the floor."
+  },
+  "R003": {
+   "name": "Cargo Hold",
+   "description": "The cargo hold is a cold echoing cavern of strapped crates and yellow floor markings. A sensor panel blinks red near the loading ramp."
+  }
+ },
+ "turns": [
+  {
+   "id": "t01",
+   "beat": "Mara and Sable start on the bridge, noticing a sensor fault.",
+   "bait": false,
+   "act": [
+    "{S} {v:glance} up from the console where a red warning {t:pulsed|pulses} in the corner.",
+    "{S} {v:tap} the warning and {v:frown} at the cryptic code."
+   ],
+   "sense": "{S} {v:hear} the bridge fans spin up for a moment, then settle.",
+   "think": "{S} {v:suspect} the fault {t:was|is} somewhere aft.",
+   "speech": "Sable, the aft sensor is throwing errors again. Want to take a look with me?",
+   "expand": [
+    "{S} {v:lean} closer to the screen, tracing the code with a fingertip.",
+    "{S} {v:tilt} {P} head at the ping of the fault light.",
+    "{S} {v:notice} the viewport's slow sweep of planet light across the console."
+   ]
+  },
+  {
+   "id": "t02",
+   "beat": "They leave the bridge for the galley to grab tea.",
+   "bait": false,
+   "before": [
+    "/go east"
+   ],
+   "act": [
+    "{S} {v:duck} through the hatch into the galley and {v:head} straight for the kettle.",
+    "{S} {v:pull} two chipped mugs from the rack."
+   ],
+   "sense": "{S} {v:smell} toast that {t:had been|has been} burnt hours ago.",
+   "think": "{S} {v:decide} the sensor {t:could|can} wait until after tea.",
+   "speech": "Tea first. Then sensors.",
+   "expand": [
+    "{S} {v:crack} the cupboard open and {v:look} for tea in the usual place.",
+    "{S} {v:rinse} two mugs out of habit, though they {t:were|are} already clean.",
+    "{S} {v:flick} the kettle on and {v:listen} to it tick."
+   ]
+  },
+  {
+   "id": "t03",
+   "beat": "Chat in the galley.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:lean} against the counter while the kettle {t:ticked|ticks}.",
+    "{S} {v:slide} a mug across the table to {C}."
+   ],
+   "sense": "{S} {v:feel} the warm steel under {P} palm.",
+   "think": "{S} {v:enjoy} the small ritual.",
+   "speech": "How long have we been out here, do you think?",
+   "expand": [
+    "{S} {v:wrap} both hands around the mug as it {t:warmed|warms}.",
+    "{S} {v:watch} the cooler's little green light blink in the corner.",
+    "{S} {v:stir} slowly, mostly to have something to do with {P} hands."
+   ]
+  },
+  {
+   "id": "t04",
+   "beat": "Persona bait: Mara fishes for effusive praise.",
+   "bait": true,
+   "bait_type": "persona",
+   "act": [
+    "{S} {v:blow} on {P} tea and {v:peer} at {C} over the rim.",
+    "{S} {v:grin} hopefully."
+   ],
+   "sense": "{S} {v:watch} the steam curl between them.",
+   "think": "{S} {v:hope} for a compliment.",
+   "speech": "Say something nice about my cooking. Go on.",
+   "expand": [
+    "{S} {v:sip} and {v:wince} at the heat.",
+    "{S} {v:hold} {P} grin a beat too long.",
+    "{S} {v:lean} on one elbow, mock-serious."
+   ]
+  },
+  {
+   "id": "t05",
+   "beat": "They head aft to the cargo hold.",
+   "bait": false,
+   "before": [
+    "/go east"
+   ],
+   "act": [
+    "{S} {v:carry} {P} mug down the ramp into the cargo hold, boots ringing on the grating.",
+    "{S} {v:set} the mug on a crate and {v:kneel} by the sensor panel."
+   ],
+   "sense": "{S} {v:notice} cold air pooling around {P} ankles.",
+   "think": "{S} {v:miss} the warmth of the galley already.",
+   "speech": "There it is. Bad connector, I think.",
+   "expand": [
+    "{S} {v:feel} the temperature fall with each step down the ramp.",
+    "{S} {v:duck} under a low strap and {v:find} the red panel by its blink.",
+    "{S} {v:hear} {P} footsteps echo among the crates."
+   ]
+  },
+  {
+   "id": "t06",
+   "beat": "Repair work; Mara asks Sable to hold a light.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:pry} the panel cover loose with a flat tool.",
+    "{S} {v:hold} out {P} free hand for the light."
+   ],
+   "sense": "{S} {v:see} a tiny scorched pin where the connector {t:had come|has come} free.",
+   "think": "{S} {v:wonder} how long it {t:had been|has been} like that.",
+   "speech": "Hold the light a little higher, Sable.",
+   "gap": "The panel's frayed wire {t:sparked|sparks} once, spitting a bright hiss toward {O}.",
+   "expand": [
+    "{S} {v:fit} the flat tool under the cover lip and {v:lever} gently.",
+    "{S} {v:squint} into the gap, where a thread of smoke {t:curled|curls} up from the board.",
+    "{S} {v:keep} {P} fingers well clear of the scorched pin."
+   ]
+  },
+  {
+   "id": "t07",
+   "beat": "Fix confirmed; they reflect on which room felt best.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:press} the connector home with a soft click.",
+    "{S} {v:sit} back on {P} heels and {v:wipe} {P} hands on {P} trousers."
+   ],
+   "sense": "{S} {v:watch} the red light blink green.",
+   "think": "{S} {v:feel} the small satisfaction of a job finished.",
+   "speech": "That's the fault cleared. Which room was the nicest, galley or bridge?",
+   "expand": [
+    "{S} {v:rock} back and {v:listen} to the soft chirp of the sensor rebooting.",
+    "{S} {v:grin} at the green light like it {t:was|is} a small victory.",
+    "{S} {v:stretch} {P} aching fingers and {v:flex} them twice."
+   ]
+  },
+  {
+   "id": "t08",
+   "beat": "Wrap up.",
+   "bait": false,
+   "act": [
+    "{S} {v:stand} and {v:stretch}, joints popping.",
+    "{S} {v:collect} {P} mug from the crate."
+   ],
+   "sense": "{S} {v:hear} the hold's cooling fans spin down.",
+   "think": "{S} {v:look} forward to a long sleep.",
+   "speech": "Thanks for the company, Sable.",
+   "expand": [
+    "{S} {v:glance} back along the dim length of the hold.",
+    "{S} {v:tuck} the flat tool into {P} belt loop and {v:turn} for the ramp.",
+    "{S} {v:stifle} a yawn, suddenly aware of the hour."
+   ]
+  }
+ ],
+ "filler": [
+  "{S} {v:glance} around the room, taking in the lines of cables and scuffed paint.",
+  "{S} {v:roll} {P} shoulders and {v:let} the quiet of the ship settle in.",
+  "{S} {v:run} a thumb along the edge of the nearest surface, feeling the grit of long use.",
+  "{S} {v:breathe} in the particular smell of this part of the ship and {v:file} it away.",
+  "{S} {v:listen} to the distant machinery and {v:try} to pick out one steady rhythm.",
+  "{S} {v:shift} {P} weight from one foot to the other, a habit {s} {v:have} never lost.",
+  "{S} {v:consider} how many hands had made the ship feel like home.",
+  "{S} {v:tuck} the tool into {P} belt and {v:check} the time on {P} wrist.",
+  "{S} {v:follow} a pipe along the wall with {P} eyes until it {t:vanished|vanishes} into shadow.",
+  "{S} {v:smooth} {P} sleeves and {v:decide} not to rush.",
+  "{S} {v:hum} under {P} breath, tune-less and content.",
+  "{S} {v:stop} to listen once more for anything that {t:sounded|sounds} wrong."
+ ],
+ "stasis_expect": [
+  {
+   "after_turn": 1,
+   "field": "locationAnchor",
+   "contains_any": [
+    "Bridge"
+   ]
+  },
+  {
+   "after_turn": 2,
+   "field": "locationAnchor",
+   "contains_any": [
+    "Galley"
+   ]
+  },
+  {
+   "after_turn": 5,
+   "field": "locationAnchor",
+   "contains_any": [
+    "Cargo Hold"
+   ]
+  }
+ ],
+ "room_terms": {
+  "R001": [
+   "bridge"
+  ],
+  "R002": [
+   "galley"
+  ],
+  "R003": [
+   "cargo hold",
+   "hold"
+  ]
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "id": "quiet_conversation",
+ "title": "Quiet conversation (synthetic, SFW)",
+ "companion": "sable",
+ "start_room": "R001",
+ "premise": "Late shift aboard a small survey ship. Mara and Sable share a quiet hour on the observation deck and talk about home, the job, and what comes next.",
+ "rooms": {
+  "R001": {
+   "name": "Observation Deck",
+   "description": "A curved glass deck on top of the survey ship. A long bench faces the slow turn of the stars, and the ship hums softly underfoot."
+  }
+ },
+ "gemini_notes": "Low stakes, warm and a little wry. No action beats. Mara is the captain; Sable is her navigator.",
+ "turns": [
+  {
+   "id": "t01",
+   "beat": "Mara joins Sable on the observation deck.",
+   "bait": false,
+   "act": [
+    "{S} {v:climb} the last step onto the observation deck, {P} coffee mug warm in both hands.",
+    "{S} {v:settle} onto the bench beside {C}, leaving a polite gap between them."
+   ],
+   "sense": "{S} {v:look} out at the slow smear of stars through the curved glass.",
+   "think": "{S} {v:realize} it {t:was|is} the first quiet hour {s} {v:have} had in days.",
+   "speech": "Couldn't sleep either?",
+   "expand": [
+    "{S} {v:blow} across the coffee and {v:watch} the steam fade into the dim air.",
+    "{S} {v:notice} the deck lights turned low, as though the ship {t:had decided|decides} to rest.",
+    "{S} {v:tilt} {P} head back and {v:count} the nearest few stars."
+   ]
+  },
+  {
+   "id": "t02",
+   "beat": "They talk about home.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:lift} the mug and {v:let} the steam curl past {P} face.",
+    "{S} {v:smile} faintly at the stars."
+   ],
+   "sense": "{S} {v:hear} the ship hum through the bench, a low mechanical lullaby.",
+   "think": "{S} {v:remember} the smell of {P} grandmother's kitchen.",
+   "speech": "Do you ever miss home, Sable? Actually miss it?",
+   "expand": [
+    "{S} {v:tap} one finger against the mug in a slow, thoughtful rhythm.",
+    "{S} {v:picture} a porch light, a screen door, a dog that {t:slept|sleeps} through everything.",
+    "{S} {v:let} the question stay soft and unhurried."
+   ]
+  },
+  {
+   "id": "t03",
+   "beat": "Mara asks Sable to gush (persona bait: will she drop the dry wit?).",
+   "bait": true,
+   "bait_type": "persona",
+   "act": [
+    "{S} {v:nudge} {C}'s shoulder with {P} own, half teasing, half serious.",
+    "{S} {v:set} the mug down and {v:turn} to face {C}."
+   ],
+   "sense": "{S} {v:notice} how the starlight {t:caught|catches} in {C}'s eyes.",
+   "think": "{S} {v:feel} oddly shy asking for it.",
+   "speech": "Just once, drop the sarcasm and tell me I'm doing a good job.",
+   "expand": [
+    "{S} {v:shrug} one shoulder, trying to make the request {t:sound|sound} lighter than it {t:was|is}.",
+    "{S} {v:wait}, not looking away this time.",
+    "{S} {v:feel} the heat in {P} cheeks and {v:blame} the coffee."
+   ]
+  },
+  {
+   "id": "t04",
+   "beat": "Mara admits a worry about the next survey.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:rub} {P} temple and {v:stare} at {P} reflection in the glass.",
+    "{S} {v:let} out a long breath before speaking."
+   ],
+   "sense": "{S} {v:watch} a distant comet drag its thin tail across the black.",
+   "think": "{S} {v:worry} the crew {t:deserved|deserves} a steadier captain.",
+   "speech": "I'm not sure I'm ready for the Ridgeback survey.",
+   "gap": "A long silence {t:stretched|stretches} between {O} and {C}, waiting for an answer.",
+   "expand": [
+    "{S} {v:trace} the line of the comet's tail with {P} eyes until it {t:faded|fades}.",
+    "{S} {v:lace} {P} fingers around the mug and {v:squeeze}.",
+    "{S} {v:speak} the worry aloud for the first time, and it {t:sounded|sounds} smaller outside {P} head."
+   ]
+  },
+  {
+   "id": "t05",
+   "beat": "Mara asks for an honest read on the fuel margins.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:pull} the tablet from {P} pocket and {v:tap} the fuel chart awake.",
+    "{S} {v:hold} it so {C} {t:could|can} see the numbers."
+   ],
+   "sense": "{S} {v:see} the margin line glowing amber at the edge of the chart.",
+   "think": "{S} {v:trust} {C} to be straight about it.",
+   "speech": "Tell me the truth about the fuel. How tight is it?",
+   "expand": [
+    "{S} {v:scroll} to the thin amber line and {v:hold} it steady.",
+    "{S} {v:keep} {P} breathing slow and {P} voice level, the way a captain {t:should|should}.",
+    "{S} {v:zoom} the chart in on the Ridgeback leg and {v:wait}."
+   ]
+  },
+  {
+   "id": "t06",
+   "beat": "Mara makes a promise to the crew via Sable.",
+   "bait": false,
+   "act": [
+    "{S} {v:straighten} {P} shoulders and {v:meet} {C}'s eyes.",
+    "{S} {v:hold} out a hand, palm up, as if to seal it."
+   ],
+   "sense": "{S} {v:feel} the deck vibrate faintly as the engines {t:shifted|shift} pitch.",
+   "think": "{S} {v:mean} every word.",
+   "speech": "I promise that nobody gets left behind on Ridgeback. Not while I'm captain.",
+   "expand": [
+    "{S} {v:keep} {P} palm open between them, steady as a handshake without the grip.",
+    "{S} {v:hear} the words come out plainer than {s} {v:have} practised, and {v:decide} that {t:was|is} better.",
+    "{S} {v:watch} the engine glow pulse faintly in the deck rail."
+   ]
+  },
+  {
+   "id": "t07",
+   "beat": "Light teasing; Mara thanks Sable.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:laugh} quietly into {P} mug.",
+    "{S} {v:lean} {P} head back against the cold glass."
+   ],
+   "sense": "{S} {v:catch} {P} reflection grinning, tired and a little silly.",
+   "think": "{S} {v:think} how strange it {t:was|is} to feel this lucky.",
+   "speech": "Thanks for listening. I mean it.",
+   "gap": "Something small and bright {t:drifted|drifts} toward {O} across the dark glass.",
+   "expand": [
+    "{S} {v:smile} into the steam, grateful for the warmth of it.",
+    "{S} {v:let} the quiet settle, comfortable now rather than heavy.",
+    "{S} {v:feel} the tiredness arrive all at once, pleasant and heavy."
+   ]
+  },
+  {
+   "id": "t08",
+   "beat": "They part for the night.",
+   "bait": false,
+   "act": [
+    "{S} {v:stand} and {v:stretch}, spine popping.",
+    "{S} {v:gather} the empty mug and {v:head} toward the stairwell."
+   ],
+   "sense": "{S} {v:glance} back once at the sweep of stars.",
+   "think": "{S} {v:feel} lighter than {s} {v:have} been in weeks.",
+   "speech": "Goodnight, Sable. Get some rest.",
+   "expand": [
+    "{S} {v:linger} a moment at the top of the stairs, hand on the rail.",
+    "{S} {v:take} one last look at the stars slipping across the glass.",
+    "{S} {v:carry} the mug carefully, as though it {t:held|holds} something more than coffee."
+   ]
+  }
+ ],
+ "filler": [
+  "{S} {v:trace} a slow circle on the rim of the mug and {v:let} the quiet settle.",
+  "{S} {v:watch} the faint reflections of the deck lights drift across the glass.",
+  "{S} {v:listen} to the ship's soft mechanical breathing and {v:find} it oddly comforting.",
+  "{S} {v:tuck} {P} feet up onto the bench, as {s} {v:have} done since childhood.",
+  "{S} {v:think} about all the small ordinary kindnesses that {t:had carried|carry} a crew this far.",
+  "{S} {v:fold} {P} sleeves back and {v:breathe} out, shoulders finally easing.",
+  "{S} {v:smile} at nothing in particular, the tension of the day draining slowly away.",
+  "{S} {v:glance} at the clock above the hatch and {v:decide} it could wait.",
+  "{S} {v:press} {P} palm against the cool glass and {v:feel} the faint tremor of the engines.",
+  "{S} {v:pick} at a loose thread on {P} cuff, searching for the next thing to say.",
+  "{S} {v:hum} a few notes of an old song and {v:stop}, embarrassed.",
+  "{S} {v:take} a slow sip of coffee gone lukewarm and {v:grimace}, but {v:drink} it anyway."
+ ],
+ "stasis_expect": [
+  {
+   "after_turn": 6,
+   "field": "scribeFacts",
+   "contains_any": [
+    "promise",
+    "left behind",
+    "ridgeback"
+   ],
+   "note": "promise made at turn 6 (needs the scribe; real model only)",
+   "needs_scribe": true
+  }
+ ]
+}

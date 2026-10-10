@@ -1,0 +1,90 @@
+{
+  "name": "dryrun_external",
+  "description": "Dry run of the EXTERNAL-server path: an already-running stub on port 1237 (started by the dry-run command, never by the run) serves two model names, 'base' and 'lora'. Local scripted player, no judge.",
+  "mode": "external",
+  "seed": 20261008,
+  "electron_bin": "/path/to/your/Electron",
+  "app_snapshot": "app_snapshot",
+  "tense": "present",
+  "perspectives": [
+    "first",
+    "second"
+  ],
+  "levels": [
+    1
+  ],
+  "scenarios": [
+    "train_robbery",
+    "quiet_conversation"
+  ],
+  "turns": 3,
+  "replicates": 1,
+  "scribe": {
+    "enabled": true,
+    "every": 3,
+    "wait": true
+  },
+  "player_bot": {
+    "kind": "local_scripted"
+  },
+  "judge": {
+    "kind": "none"
+  },
+  "incidents": {
+    "streak": 3,
+    "basis": "raw",
+    "replay": true
+  },
+  "labels": {
+    "sample": 50,
+    "seed": 7
+  },
+  "timeouts": {
+    "turn_s": 120
+  },
+  "throttle": {
+    "rest_ratio": 0
+  },
+  "configurations": [
+    {
+      "id": "ext_base",
+      "label": "stub serving 'base' as an external server",
+      "guards": true,
+      "model": "base",
+      "model_name": "base",
+      "force_model": true,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 600,
+      "inject_seed": true,
+      "server": {
+        "kind": "external",
+        "host": "127.0.0.1",
+        "port": 1237,
+        "health_timeout_s": 10,
+        "health_recheck_s": 3,
+        "request_timeout_s": 3
+      }
+    },
+    {
+      "id": "ext_lora",
+      "label": "stub serving 'lora' as an external server",
+      "guards": true,
+      "model": "lora",
+      "model_name": "lora",
+      "force_model": true,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 600,
+      "inject_seed": true,
+      "server": {
+        "kind": "external",
+        "host": "127.0.0.1",
+        "port": 1237,
+        "health_timeout_s": 10,
+        "health_recheck_s": 3,
+        "request_timeout_s": 3
+      }
+    }
+  ]
+}

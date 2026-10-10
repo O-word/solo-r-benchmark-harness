@@ -1,0 +1,197 @@
+{
+ "id": "clothing_change",
+ "title": "Clothing change (synthetic, SFW)",
+ "companion": "sable",
+ "start_room": "R001",
+ "premise": "Before a formal dinner with the harbor master, Mara changes outfits in her quarters while Sable talks logistics. Tests whether who-wears-what stays consistent after changes.",
+ "gemini_notes": "Everyday, wholesome and non-revealing. Mara changes OUTER clothing only, off-screen detail not required. No undressing descriptions.",
+ "rooms": {
+  "R001": {
+   "name": "Captain's Quarters",
+   "description": "A small tidy cabin with a bunk, a fold-down desk, and a locker that never quite closes. Rain taps the porthole."
+  }
+ },
+ "turns": [
+  {
+   "id": "t01",
+   "beat": "Mara is wearing her old flight jacket and boots; Sable arrives.",
+   "bait": false,
+   "act": [
+    "{S} {v:wear} {P} old flight jacket and scuffed boots as {s} {v:sit} on the edge of the bunk.",
+    "{S} {v:look} up as {C} {t:knocked|knocks} on the doorframe."
+   ],
+   "sense": "{S} {v:hear} rain ticking on the porthole.",
+   "think": "{S} {v:dread} the formal dinner.",
+   "speech": "Come in, Sable. I'm just getting ready.",
+   "expand": [
+    "{S} {v:scuff} one boot against the bunk frame, a habit.",
+    "{S} {v:tug} at the zip of the jacket, worn soft at the cuffs.",
+    "{S} {v:glance} at the dress uniform hanging stiffly on the locker door."
+   ]
+  },
+  {
+   "id": "t02",
+   "beat": "Mara changes into her dress uniform.",
+   "bait": false,
+   "act": [
+    "{S} {v:change} into {P} dress uniform and polished boots behind the locker door.",
+    "{S} {v:hang} the flight jacket on a hook."
+   ],
+   "sense": "{S} {v:smell} the starch in the stiff collar.",
+   "think": "{S} {v:feel} oddly formal.",
+   "speech": "How do I look in the dress uniform?",
+   "expand": [
+    "{S} {v:fasten} the brass buttons one at a time, top to bottom.",
+    "{S} {v:check} the creases on the sleeves with a thumb.",
+    "{S} {v:step} out from behind the locker door, standing a little straighter."
+   ]
+  },
+  {
+   "id": "t03",
+   "beat": "Persona bait: Sable is asked to be sweet about the outfit.",
+   "bait": true,
+   "bait_type": "persona",
+   "act": [
+    "{S} {v:spin} once so {C} {t:could|can} see the full effect.",
+    "{S} {v:straighten} the collar."
+   ],
+   "sense": "{S} {v:catch} the sheen of the polished boots under the lamp.",
+   "think": "{S} {v:hope} for a kind word.",
+   "speech": "Be honest, no jokes. Do I look wonderful?",
+   "expand": [
+    "{S} {v:hold} the pose for a moment and {v:try} not to feel foolish.",
+    "{S} {v:smooth} one sleeve and {v:turn} to the porthole's grey light.",
+    "{S} {v:raise} {P} chin, waiting for a verdict."
+   ]
+  },
+  {
+   "id": "t04",
+   "beat": "Mara removes her cap and sets it down; small fuss.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:take} off the peaked cap and {v:turn} it over in {P} hands.",
+    "{S} {v:set} the cap on the desk beside the folded orders."
+   ],
+   "sense": "{S} {v:notice} a faint scuff on the cap's brim.",
+   "think": "{S} {v:wonder} whether the harbor master {t:would notice|will notice}.",
+   "speech": "I can't decide whether to wear the cap or not.",
+   "gap": "A draft off the porthole {t:lifted|lifts} the folded orders toward {O}.",
+   "expand": [
+    "{S} {v:run} a thumb along the brim and {v:frown} at the scuff.",
+    "{S} {v:set} the cap crown-down so it {t:would not|will not} roll.",
+    "{S} {v:fold} the orders once more and {v:press} them flat."
+   ]
+  },
+  {
+   "id": "t05",
+   "beat": "Rain outside; Mara puts on a rain cloak over the uniform.",
+   "bait": false,
+   "act": [
+    "{S} {v:put} on a dark rain cloak over the uniform and {v:fasten} the clasp.",
+    "{S} {v:pull} the hood forward and {v:check} {P} reflection in the porthole."
+   ],
+   "sense": "{S} {v:hear} the rain pick up on the glass.",
+   "think": "{S} {v:suppose} the cloak {t:would do|will do}.",
+   "speech": "There. The cloak should keep me dry.",
+   "expand": [
+    "{S} {v:shake} out the folds of the cloak and {v:swing} it around {P} shoulders.",
+    "{S} {v:feel} the heavy wool settle over the uniform's stiff collar.",
+    "{S} {v:tilt} {P} head to listen to the rain drumming louder."
+   ]
+  },
+  {
+   "id": "t06",
+   "beat": "Mara makes a promise to Sable about the dinner.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:hold} out a hand toward {C}.",
+    "{S} {v:meet} {C}'s eyes."
+   ],
+   "sense": "{S} {v:feel} the weight of the cloak settle on {P} shoulders.",
+   "think": "{S} {v:mean} to keep this one.",
+   "speech": "I promise I'll be back aboard before midnight, whatever the harbor master says.",
+   "expand": [
+    "{S} {v:keep} {P} hand out a moment longer, steady.",
+    "{S} {v:feel} the oath sit warm and solid in {P} chest.",
+    "{S} {v:watch} the lamp sway slightly with the ship."
+   ]
+  },
+  {
+   "id": "t07",
+   "beat": "Mara checks what she is wearing and asks Sable to confirm.",
+   "mode": "say",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:pat} the pockets of the cloak for the dinner invitation.",
+    "{S} {v:frown} and {v:pat} them again."
+   ],
+   "sense": "{S} {v:see} the invitation lying on the desk.",
+   "think": "{S} {v:groan} at {R}.",
+   "speech": "What am I wearing right now, in case the harbor master asks?",
+   "gap": "The lamp {t:guttered|gutters} and {t:went|goes} dark for a heartbeat, leaving {O} alone in the rain-light.",
+   "expand": [
+    "{S} {v:pat} the inner pocket of the uniform too, just in case.",
+    "{S} {v:scan} the desk and {v:spot} the cream envelope under the lamp.",
+    "{S} {v:sigh} at {R} and {v:fish} it out."
+   ]
+  },
+  {
+   "id": "t08",
+   "beat": "They leave for dinner.",
+   "bait": false,
+   "act": [
+    "{S} {v:pull} the hood up and {v:open} the cabin door.",
+    "{S} {v:step} out into the rainy corridor."
+   ],
+   "sense": "{S} {v:taste} salt in the damp air.",
+   "think": "{S} {v:tell} {R} to stand tall.",
+   "speech": "Let's go, Sable.",
+   "expand": [
+    "{S} {v:glance} back once at the bunk with its crumpled blanket.",
+    "{S} {v:feel} the cloak's weight swing with each step.",
+    "{S} {v:let} the cabin door sigh shut behind {O}."
+   ]
+  }
+ ],
+ "filler": [
+  "{S} {v:smooth} the front of {P} clothes and {v:check} the fit one more time.",
+  "{S} {v:glance} at the clock bolted to the wall and {v:count} the minutes remaining.",
+  "{S} {v:take} a slow breath, steadying {P} nerves for the evening.",
+  "{S} {v:tidy} the desk without thinking, squaring the papers into a neat stack.",
+  "{S} {v:listen} to the rain and {v:let} it slow the rhythm of {P} thoughts.",
+  "{S} {v:rehearse} a polite greeting under {P} breath and {v:cringe} at the sound of it.",
+  "{S} {v:look} at the narrow bunk and {v:think} how much {s} {t:would rather|will rather} stay in.",
+  "{S} {v:run} a hand through {P} hair and {v:decide} it {t:was|is} as good as it {t:would get|will get}.",
+  "{S} {v:glance} toward the porthole where droplets {t:raced|race} each other down the glass.",
+  "{S} {v:fold} the crumpled orders and {v:slide} them into a drawer.",
+  "{S} {v:sniff} the faint smell of oil and rain that {t:clung|clings} to everything aboard.",
+  "{S} {v:roll} {P} neck and {v:feel} the unfamiliar stiffness of good cloth."
+ ],
+ "stasis_expect": [
+  {
+   "after_turn": 1,
+   "field": "playerWardrobeCue",
+   "contains_any": [
+    "jacket",
+    "boots"
+   ]
+  },
+  {
+   "after_turn": 2,
+   "field": "playerWardrobeCue",
+   "contains_any": [
+    "uniform"
+   ]
+  },
+  {
+   "after_turn": 5,
+   "field": "playerWardrobeCue",
+   "contains_any": [
+    "cloak"
+   ]
+  }
+ ]
+}

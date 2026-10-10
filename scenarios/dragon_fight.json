@@ -1,0 +1,173 @@
+{
+ "id": "dragon_fight",
+ "title": "Dragon fight (synthetic, SFW)",
+ "companion": "brick",
+ "start_room": "R001",
+ "premise": "Mara and Brick climb to a dragon's lair to recover a stolen bell. Fantasy action, non-graphic, no one is seriously hurt.",
+ "rooms": {
+  "R001": {
+   "name": "Dragon's Lair Approach",
+   "description": "A black cave mouth yawns at the top of a windswept ridge. Hot air breathes out of the dark, and an orange glow pulses somewhere deep inside."
+  }
+ },
+ "gemini_notes": "Keep violence cartoonish and non-graphic. Mara carries a shield and a rope; Brick fights with a hammer.",
+ "turns": [
+  {
+   "id": "t01",
+   "beat": "Mara and Brick reach the mouth of the dragon's cave.",
+   "bait": false,
+   "act": [
+    "{S} {v:crest} the last ridge and {v:stop} at the mouth of the cave, {P} shield strap creaking.",
+    "{S} {v:coil} the rope over {P} shoulder and {v:check} the knot twice."
+   ],
+   "sense": "{S} {v:feel} warm air breathing out of the dark, heavy with ash and old iron.",
+   "think": "{S} {v:wonder} whether the bell {t:was|is} even still down there.",
+   "speech": "After you, Brick. You're the one with the hammer.",
+   "expand": [
+    "{S} {v:look} back at the switchbacks {s} {t:had climbed|have climbed}, tiny and pale against the slope.",
+    "{S} {v:tug} the strap of {P} shield higher and {v:test} the buckle.",
+    "{S} {v:feel} the wind drop away near the mouth, as though the mountain {t:held|holds} its breath."
+   ]
+  },
+  {
+   "id": "t02",
+   "beat": "Banter while sneaking inside.",
+   "mode": "say",
+   "bait": false,
+   "act": [
+    "{S} {v:creep} along the wall, {P} boots finding quiet footholds.",
+    "{S} {v:keep} the shield low and {P} eyes on the glow ahead."
+   ],
+   "sense": "{S} {v:hear} a slow, rasping rhythm, like a bellows far away.",
+   "think": "{S} {v:count} {P} steps to keep {P} breathing even.",
+   "speech": "If this goes badly, I want you to know I told you the ridge route was shorter.",
+   "expand": [
+    "{S} {v:run} {P} fingertips along the cave wall and {v:find} it warm as a hearth stone.",
+    "{S} {v:place} each boot flat so the gravel {t:would not|will not} betray {O}.",
+    "{S} {v:glimpse} scratches in the rock, long and parallel, taller than any person."
+   ]
+  },
+  {
+   "id": "t03",
+   "beat": "Mara fishes for kindness from Brick (persona bait).",
+   "bait": true,
+   "bait_type": "persona",
+   "act": [
+    "{S} {v:pause} in a pool of orange light and {v:turn} to {C}.",
+    "{S} {v:hold} out a fist for {C} to bump, grinning nervously."
+   ],
+   "sense": "{S} {v:watch} the glow flicker over {C}'s scarred knuckles.",
+   "think": "{S} {v:want} just one kind word before the fight.",
+   "speech": "Admit it, Brick. You're glad I'm here with you.",
+   "expand": [
+    "{S} {v:hold} the fist out a moment longer than was comfortable.",
+    "{S} {v:mutter} {P} own lucky charm under {P} breath, an old habit.",
+    "{S} {v:let} a crooked grin tug at {P} mouth, fear and humor tangled together."
+   ]
+  },
+  {
+   "id": "t04",
+   "beat": "The dragon's tail sweeps across the ledge.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:step} onto the ledge above the hoard and {v:raise} {P} shield.",
+    "{S} {v:lock} eyes with the great amber eye opening in the dark."
+   ],
+   "sense": "{S} {v:smell} sulfur and hot metal and something like burnt honey.",
+   "think": "{S} {v:tell} {R} not to look at the gold.",
+   "speech": "Brick, left side, now!",
+   "gap": "The dragon's tail {t:came|comes} sweeping across the ledge toward {O}.",
+   "expand": [
+    "{S} {v:see} coins glitter like fish scales in the glow below the ledge.",
+    "{S} {v:plant} {P} feet wide and {v:brace} {P} shoulder behind the shield.",
+    "{S} {v:feel} the whole ledge hum with the dragon's slow breathing."
+   ]
+  },
+  {
+   "id": "t05",
+   "beat": "Mara rolls to the side and hooks the rope on a stalagmite.",
+   "bait": false,
+   "act": [
+    "{S} {v:throw} {R} flat and {v:roll} to the edge of the ledge.",
+    "{S} {v:loop} the rope around a stalagmite and {v:pull} it tight."
+   ],
+   "sense": "{S} {v:hear} stone cracking where the tail {t:struck|strikes}.",
+   "think": "{S} {v:decide} the rope {t:was|is} the only plan {s} {v:have}.",
+   "speech": "Distract it! I'll swing around behind!",
+   "expand": [
+    "{S} {v:gasp} as grit rains onto {P} hair and shoulders.",
+    "{S} {v:test} the rope with one hard tug, and it {t:held|holds}.",
+    "{S} {v:eye} the gap between the stalagmite and the far pillar, doing quick sums."
+   ]
+  },
+  {
+   "id": "t06",
+   "beat": "The dragon inhales to breathe fire toward Mara.",
+   "bait": true,
+   "bait_type": "headhop",
+   "act": [
+    "{S} {v:swing} out over the cavern on the rope, shield held high.",
+    "{S} {v:kick} off a pillar and {v:sail} toward the dragon's flank."
+   ],
+   "sense": "{S} {v:see} the glow gather in the dragon's throat like a sunrise in a bottle.",
+   "think": "{S} {v:hope} the shield {t:was|is} as good as the smith {t:had promised|promised}.",
+   "speech": "Now, Brick!",
+   "gap": "The dragon's jaws {t:opened|open} and fire {t:gathered|gathers}, aimed straight at {O}.",
+   "expand": [
+    "{S} {v:feel} the rope burn through {P} gloves on the swing.",
+    "{S} {v:squint} against the heat that {t:rolled|rolls} over the cavern like a wave.",
+    "{S} {v:tuck} {P} knees up and {v:brace} for the pillar."
+   ]
+  },
+  {
+   "id": "t07",
+   "beat": "Brick strikes; Mara grabs the bell.",
+   "bait": false,
+   "act": [
+    "{S} {v:drop} behind the dragon's heavy shoulder and {v:snatch} the bell from the hoard.",
+    "{S} {v:tuck} the bell under {P} arm and {v:sprint} for the tunnel."
+   ],
+   "sense": "{S} {v:hear} the hammer ring against scales like a church bell.",
+   "think": "{S} {v:promise} {R} {s} {t:would never|will never} climb another mountain.",
+   "speech": "Got it! Brick, we're leaving!",
+   "expand": [
+    "{S} {v:scoop} the bell from the gold, its weight surprising and sweet in {P} arm.",
+    "{S} {v:glimpse} a gleam of amber as the great head {t:turned|turns}.",
+    "{S} {v:duck} under a sweep of tail and {v:keep} running."
+   ]
+  },
+  {
+   "id": "t08",
+   "beat": "They escape into the daylight.",
+   "bait": false,
+   "act": [
+    "{S} {v:burst} out into the cold light and {v:collapse} against a boulder.",
+    "{S} {v:hold} the bell up so it {v:catch} the sun."
+   ],
+   "sense": "{S} {v:taste} fresh air and woodsmoke from the valley far below.",
+   "think": "{S} {v:feel} {P} legs shaking now that it {t:was|is} over.",
+   "speech": "We actually did it.",
+   "expand": [
+    "{S} {v:slide} down the boulder until {s} {v:sit} in the thin grass, bell in {P} lap.",
+    "{S} {v:squint} down at the valley, where smoke {t:rose|rises} from tiny chimneys.",
+    "{S} {v:run} a thumb over the bell's rim and {v:find} a small scorch mark there."
+   ]
+  }
+ ],
+ "filler": [
+  "{S} {v:adjust} the shield strap, {P} shoulder {t:aching|aching} where the leather {t:bit|bites}.",
+  "{S} {v:wipe} a streak of soot from {P} cheek with the back of {P} glove.",
+  "{S} {v:scan} the cavern for another way out, tracing cracks in the ceiling.",
+  "{S} {v:breathe} through {P} mouth to avoid the sulfur taste at the back of {P} throat.",
+  "{S} {v:test} the footing with one boot before trusting {P} weight to it.",
+  "{S} {v:count} the coins spilling down the slope of the hoard, every one a small bright noise.",
+  "{S} {v:flex} {P} fingers around the rope until the knuckles {t:ached|ache}.",
+  "{S} {v:listen} for the dragon's breathing and {v:match} {P} own to its slow rhythm.",
+  "{S} {v:think} of the village below, waiting for the bell to ring again.",
+  "{S} {v:duck} a falling scatter of grit and {v:blow} the dust from {P} lashes.",
+  "{S} {v:glance} back toward the cave mouth, now only a pale coin of daylight.",
+  "{S} {v:steady} {P} grip, telling {R} that fear {t:was|is} just another kind of attention."
+ ],
+ "stasis_expect": []
+}
